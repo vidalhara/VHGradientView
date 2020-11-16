@@ -6,6 +6,7 @@
 VHGradientView is an UIView which helps you to apply your gradient colors on it.
 
 * [Installation](#installation)
+* [Documentation](#documentation)
 * [License](#license)
 
 ## Installation
@@ -25,6 +26,10 @@ pod 'VHGradientView', '~> 1.0.0'
 ```
 github "vidalhara/VHGradientView" ~> 1.0.0
 ```
+
+## Documentation
+
+To reach the documentation [click here](https://vidalhara.github.io/VHGradientView/)
 
 ## License
 
