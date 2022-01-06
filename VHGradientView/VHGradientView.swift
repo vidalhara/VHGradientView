@@ -31,6 +31,12 @@ open class VHGradientView: UIView {
         set { gradientLayer.modeDiagonal = newValue }
     }
 
+    private var colors: [UIColor] = [] {
+        didSet {
+            gradientLayer.set(colors: colors)
+        }
+    }
+
     /// layerClass returns CAGradientLayer
     override class open var layerClass: AnyClass { return VHGradientLayer.self }
     // swiftlint:disable:next force_cast
@@ -42,9 +48,16 @@ open class VHGradientView: UIView {
         gradientLayer.reloadUI()
     }
 
+    open override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        if #available(iOS 13.0, *), traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection) {
+            set(colors: colors)
+        }
+    }
+
     /// You can set gradient colors
     /// - Parameter colors: Gradient colors
     open func set(colors: [UIColor]) {
-        self.gradientLayer.set(colors: colors)
+        self.colors = colors
     }
 }
