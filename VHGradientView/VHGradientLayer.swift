@@ -19,11 +19,16 @@ open class VHGradientLayer: CAGradientLayer {
     open var endLocation: Double = 1.0 { didSet { updateLocations() } }
 
     /// Is gradient horizontal or vertical
-    open var modeHorizontal: Bool = false { didSet { updatePoints() } }
+    open var isHorizontal: Bool = false { didSet { updatePoints() } }
     /// Is gradient diagonal
-    open var modeDiagonal: Bool = false { didSet { updatePoints() } }
+    open var isDiagonal: Bool = false { didSet { updatePoints() } }
 
-    private var cgColors: [CGColor]? { didSet { self.updateColors() } }
+    private var cgColors: [CGColor]? {
+        didSet {
+            updateColors()
+            updateLocations()
+        }
+    }
 
     /// You can set gradient colors
     /// - Parameter colors: Gradient colors
@@ -45,17 +50,22 @@ open class VHGradientLayer: CAGradientLayer {
     }
 
     private func updatePoints() {
-        if modeHorizontal {
-            startPoint = modeDiagonal ? CGPoint(x: 1, y: 0) : CGPoint(x: 0, y: 0.5)
-            endPoint = modeDiagonal ? CGPoint(x: 0, y: 1) : CGPoint(x: 1, y: 0.5)
+        if isHorizontal {
+            startPoint = isDiagonal ? CGPoint(x: 1, y: 0) : CGPoint(x: 0, y: 0.5)
+            endPoint = isDiagonal ? CGPoint(x: 0, y: 1) : CGPoint(x: 1, y: 0.5)
         } else {
-            startPoint = modeDiagonal ? CGPoint(x: 0, y: 0) : CGPoint(x: 0.5, y: 0)
-            endPoint = modeDiagonal ? CGPoint(x: 1, y: 1) : CGPoint(x: 0.5, y: 1)
+            startPoint = isDiagonal ? CGPoint(x: 0, y: 0) : CGPoint(x: 0.5, y: 0)
+            endPoint = isDiagonal ? CGPoint(x: 1, y: 1) : CGPoint(x: 0.5, y: 1)
         }
     }
 
     private func updateLocations() {
-        locations = [startLocation as NSNumber, endLocation as NSNumber]
+        let locationUnit = (endLocation - startLocation) / Double(max(1, (cgColors ?? []).count - 1))
+        var result: [Double] = [startLocation]
+        while (result.last ?? 0) < endLocation {
+            result.append((result.last ?? 0) + locationUnit)
+        }
+        locations = result.map { $0 as NSNumber }
     }
 
     private func updateColors() {

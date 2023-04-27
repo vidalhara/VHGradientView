@@ -21,14 +21,14 @@ open class VHGradientView: UIView {
     }
 
     /// Is gradient horizontal or vertical
-    @IBInspectable open var modeHorizontal: Bool {
-        get { return gradientLayer.modeHorizontal }
-        set { gradientLayer.modeHorizontal = newValue }
+    @IBInspectable open var isHorizontal: Bool {
+        get { return gradientLayer.isHorizontal }
+        set { gradientLayer.isHorizontal = newValue }
     }
     /// Is gradient diagonal
-    @IBInspectable open var modeDiagonal: Bool {
-        get { return gradientLayer.modeDiagonal }
-        set { gradientLayer.modeDiagonal = newValue }
+    @IBInspectable open var isDiagonal: Bool {
+        get { return gradientLayer.isDiagonal }
+        set { gradientLayer.isDiagonal = newValue }
     }
 
     private var colors: [UIColor] = [] {
