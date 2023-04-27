@@ -1,6 +1,12 @@
 {
   "warnings": [
-
+    {
+      "file": "/Users/vidalhara/Documents/Coding/Vidal/VHGradientView/VHGradientView/VHGradientView.swift",
+      "line": 51,
+      "symbol": "VHGradientView.traitCollectionDidChange(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
   ],
-  "source_directory": "/Users/CompanyUser/Documents/Vidal/VHGradientView"
+  "source_directory": "/Users/vidalhara/Documents/Coding/Vidal/VHGradientView"
 }

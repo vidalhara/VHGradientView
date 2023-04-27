@@ -17,19 +17,19 @@
     <a title="VHGradientView Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">VHGradientView 1.0.0 Docs</a> (100% documented)</p>
-        <p class="header-right"><a href="https://github.com/vidalhara/VHGradientView"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right">
+        <p><a href="../index.html">VHGradientView 1.1.0 Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/vidalhara/VHGradientView"><img src="../img/gh.png" alt="GitHub"/>View on GitHub</a></p>
+        <div class="header-right">
           <form role="search" action="../search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
           </form>
-        </p>
+        </div>
       </div>
     </header>
     <div class="content-wrapper">
       <p id="breadcrumbs">
         <a href="../index.html">VHGradientView Reference</a>
-        <img id="carat" src="../img/carat.png" />
+        <img id="carat" src="../img/carat.png" alt=""/>
         VHGradientView Class Reference
       </p>
     </div>
@@ -125,9 +125,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@VHGradientView@objc(cs)VHGradientView(py)modeHorizontal"></a>
-                    <a name="//apple_ref/swift/Property/modeHorizontal" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@VHGradientView@objc(cs)VHGradientView(py)modeHorizontal">modeHorizontal</a>
+                    <a name="/c:@M@VHGradientView@objc(cs)VHGradientView(py)isHorizontal"></a>
+                    <a name="//apple_ref/swift/Property/isHorizontal" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VHGradientView@objc(cs)VHGradientView(py)isHorizontal">isHorizontal</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -143,7 +143,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@IBInspectable</span>
-<span class="kd">open</span> <span class="k">var</span> <span class="nv">modeHorizontal</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+<span class="kd">open</span> <span class="k">var</span> <span class="nv">isHorizontal</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -153,9 +153,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@VHGradientView@objc(cs)VHGradientView(py)modeDiagonal"></a>
-                    <a name="//apple_ref/swift/Property/modeDiagonal" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@VHGradientView@objc(cs)VHGradientView(py)modeDiagonal">modeDiagonal</a>
+                    <a name="/c:@M@VHGradientView@objc(cs)VHGradientView(py)isDiagonal"></a>
+                    <a name="//apple_ref/swift/Property/isDiagonal" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VHGradientView@objc(cs)VHGradientView(py)isDiagonal">isDiagonal</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -171,7 +171,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@IBInspectable</span>
-<span class="kd">open</span> <span class="k">var</span> <span class="nv">modeDiagonal</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+<span class="kd">open</span> <span class="k">var</span> <span class="nv">isDiagonal</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -235,6 +235,52 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:@M@VHGradientView@objc(cs)VHGradientView(im)traitCollectionDidChange:"></a>
+                    <a name="//apple_ref/swift/Method/traitCollectionDidChange(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VHGradientView@objc(cs)VHGradientView(im)traitCollectionDidChange:">traitCollectionDidChange(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called when the iOS interface environment changes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">traitCollectionDidChange</span><span class="p">(</span><span class="n">_</span> <span class="nv">previousTraitCollection</span><span class="p">:</span> <span class="kt">UITraitCollection</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>previousTraitCollection</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The UITraitCollection object before the interface environment changed.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:14VHGradientViewAAC3set6colorsySaySo7UIColorCG_tF"></a>
                     <a name="//apple_ref/swift/Method/set(colors:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:14VHGradientViewAAC3set6colorsySaySo7UIColorCG_tF">set(colors:<wbr>)</a>
@@ -284,10 +330,9 @@
         </section>
         <section id="footer">
           <p>Copyright © 2020 Vidal HARA. VHGradientView released under MIT License.</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>
     </div>
   </body>
-</div>
 </html>

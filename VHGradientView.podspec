@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "VHGradientView"
-  spec.version      = "1.0.1"
+  spec.version      = "1.1.0"
   spec.summary      = "VHGradientView is an UIView which helps you to apply your gradient colors on it."
 
   spec.homepage     = "https://github.com/vidalhara/VHGradientView"

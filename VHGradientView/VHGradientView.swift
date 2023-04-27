@@ -48,6 +48,9 @@ open class VHGradientView: UIView {
         gradientLayer.reloadUI()
     }
 
+
+    /// Called when the iOS interface environment changes.
+    /// - Parameter previousTraitCollection: The UITraitCollection object before the interface environment changed.
     open override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
         if #available(iOS 13.0, *), traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection) {
